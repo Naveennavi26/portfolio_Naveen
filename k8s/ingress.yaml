@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: naveen-portfolio-ingress
+spec:
+  rules:
+    - host: naveen.devops.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: naveen-portfolio-service
+                port:
+                  number: 80

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: naveen-portfolio-service
+spec:
+  selector:
+    app: naveen-portfolio
+  ports:
+    - port: 80
+      targetPort: 80
+  type: LoadBalancer
